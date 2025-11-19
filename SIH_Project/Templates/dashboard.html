@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alumni Hub – Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <!-- Top-left Hamburger + Menu -->
+  <div class="menu-wrap">
+    <button id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div id="menu" class="menu hidden">
+      <div class="menu-title">Navigate</div>
+      <ul>
+        <li data-section="Login/Signup">Login/Signup</li>
+        <li data-section="Dashboard" class="active">Dashboard</li>
+        <li data-section="Profile Builder">Profile Builder</li>
+        <li data-section="AI Recommendation">AI Recommendation</li>
+        <li data-section="Chat System">Chat System</li>
+        <li data-section="Mentorship Program">Mentorship Program</li>
+        <li data-section="Batch Communities">Batch Communities</li>
+        <li data-section="Live Reunion Map">Live Reunion Map</li>
+        <li data-section="Badges & Achievements">Badges & Achievements</li>
+        <li data-section="Discussions">Discussions</li>
+        <li data-section="Memories">Memories</li>
+        <li data-section="Contact">Contact</li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="page">
+    <h1 class="heading">Dashboard Overview</h1>
+
+    <!-- Stat Cards -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Total Alumni</div>
+        <div class="stat-value">12,430</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Active Users</div>
+        <div class="stat-value">2,312</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Events Conducted</div>
+        <div class="stat-value">87</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Mentorships Active</div>
+        <div class="stat-value">142</div>
+      </div>
+    </section>
+
+    <!-- Charts Row -->
+    <section class="charts-grid">
+      <!-- Line Chart -->
+      <div class="panel">
+        <div class="panel-title">Monthly Alumni Activity</div>
+        <div class="linechart-wrap">
+          <svg id="lineChart" preserveAspectRatio="none"></svg>
+          <div class="axis-labels" id="xLabels"></div>
+        </div>
+      </div>
+
+      <!-- Pie Chart -->
+      <div class="panel">
+        <div class="panel-title">Department Distribution</div>
+        <div class="pie-wrap">
+          <div class="pie" id="pieChart" title="Department Distribution"></div>
+          <ul class="legend" id="pieLegend"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Panels -->
+    <section class="cards-3">
+      <div class="panel">
+        <div class="panel-title">Recent Achievers</div>
+        <ul class="list">
+          <li>🎓 Aisha Khan – Promoted to Senior ML Engineer</li>
+          <li>🏆 Ravi Patel – Won IEEE Tech Excellence Award</li>
+          <li>💼 Leena Thomas – Joined CloudNova UK as SDE II</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Upcoming Events</div>
+        <ul class="list">
+          <li>🚀 AI Hackathon 2026 – March 10</li>
+          <li>🤝 Alumni Connect Meetup – April 2</li>
+          <li>🎤 TechTalk: Future of AI Ethics – May 15</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Top Mentors</div>
+        <ul class="list">
+          <li>👩‍💻 Sahana R – CSE 2019</li>
+          <li>👨‍🔬 Omar Farooq – IT 2015</li>
+          <li>🤖 Vikram Rao – MECH 2014</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
